@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+
+.mainBlock{
+    display: flex;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.twoBlocks {
+    display: flex;
+    width: 100%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainUserBlock {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    background: #f89d9d;
+    justify-content: center;
+}
+.mainUserBlockTwo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.mainUserBlockTwo>div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.mainPostBlock{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    background: #8edfff;
 }
 
-.App-link {
-  color: #61dafb;
+.mainPostBlockTwo {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.mainPostBlockTwo>div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 48.5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+.thirdBlock{
+    display: flex;
+    background: floralwhite;
+}
+
+.mainCommentBlock{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.commentBlock {
+    width: 18.5%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
