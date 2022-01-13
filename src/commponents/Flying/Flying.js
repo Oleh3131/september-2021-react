@@ -2,7 +2,7 @@ import React from 'react';
 
 const Flying = (props) => {
 
-    const {mission_name,launch_year,photo} = props;
+    const {mission_name, launch_year, photo} = props;
 
     return (
         <div className={'ShuttleLaunches'}>

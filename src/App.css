@@ -1,27 +1,27 @@
 
-.SpaceX{
-  display: flex;
-  flex-direction: column;
+.SpaceX {
+    display: flex;
+    flex-direction: column;
 }
 
 .ShuttleLaunches {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  border: 2px solid black;
-  margin: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid black;
+    margin: 5px;
 }
 
 .Blocks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
 .img {
-  width: 50%;
-  display: flex;
-  justify-content: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
