@@ -12,8 +12,15 @@
    display: flex;
    justify-content: center;
    align-items: center;
-
 }
+.mainUserPropSecond{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+}
+
+
+
 
 .mainUserProp>button {
    display: flex;

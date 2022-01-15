@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './Post.css'
+
 const Post = ({post}) => {
     const {id,userId,title, body} = post
     return (
-        <div>
+        <div className={'mainPosts'}>
             <h2>userId:{userId}</h2>
             <h3>id:{id}</h3>
             <p>title:{title}</p>
