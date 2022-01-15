@@ -4,8 +4,12 @@ import {userService} from "../../services/user.servise";
 import User from '../User/User'
 import MainUser from "../MainUser/MainUser";
 
+import './Users.css';
+import './MainUser.css';
+import '../User/User.css';
 
-const Users = () => {
+
+const Users = ({getUserId}) => {
 
     const [users, setUsers] = useState([]);
 
@@ -20,14 +24,14 @@ const Users = () => {
     };
 
     return (
-        <div>
-            { useR && <MainUser useR={useR}/>}
-            {users.map(value =>
-                <User
-                key={value.id}
-                user={value}
-                getUser={getUser}
-            />)}
+        <div className={'Users'}>
+            <div className={'mainUser'}>
+                {users.map(value => <User key={value.id} user={value} getUser={getUser}/>)}
+            </div>
+            <div className={'getUser'}>
+                {useR && <MainUser useR={useR} getUserId={getUserId}/>}
+            </div>
+
         </div>
     );
 };

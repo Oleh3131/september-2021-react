@@ -1,5 +1,34 @@
 
-
 .mainUser {
     display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: #a3f5ff;
+    border: 2px solid white;
+}
+
+.UserProperties {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserProperties>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+
+
+.UserProperties > button {
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    background: #7beeff;
 }

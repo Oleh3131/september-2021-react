@@ -1,0 +1,28 @@
+.getUser {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   justify-content: center;
+   align-items: center;
+   background: #a3f5ff;
+   border: 2px solid white;
+}
+
+.mainUserProp {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.mainUserProp>button {
+   display: flex;
+   width: 100px;
+   height: 40px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   border: 2px solid white;
+   cursor: pointer;
+   background: #7beeff;
+}

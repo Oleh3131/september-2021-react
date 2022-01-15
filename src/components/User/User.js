@@ -2,12 +2,12 @@ import React from 'react';
 
 import './User.css'
 
-const User = ({user,getUser}) => {
+const User = ({user, getUser}) => {
 
-    const {id,name,username,email,address,phone,website,company} = user;
+    const {id, name, username, email, address, phone, website, company} = user;
 
     return (
-        <div className={'mainUser'}>
+        <div className={'UserProperties'}>
             <div>
                 <h2>id:{id}</h2>
                 <h4>name:{name}</h4>
@@ -25,7 +25,10 @@ const User = ({user,getUser}) => {
                 <h5>company catchPhrase:{company.catchPhrase}</h5>
                 <h5>company bs:{company.bs}</h5>
             </div>
-            <button onClick={() => {getUser(user)}}>Get Details</button>
+            <button onClick={() => {
+                getUser(user)
+            }}>Get Details
+            </button>
         </div>
     );
 };
