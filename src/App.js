@@ -20,18 +20,18 @@ function App() {
 
    const getFiltred = (form) => {
 
-       let Array = [...users];
+       let array = [...users];
 
        if (form.name) {
-           Array=Array.filter(user=>user.name.toLowerCase().includes(form.name.toLowerCase()))
+           array =array.filter(user=>user.name.toLowerCase().includes(form.name.toLowerCase()))
        }
        if (form.username) {
-           Array=Array.filter(user=>user.username.toLowerCase().includes(form.username.toLowerCase()))
+           array =array.filter(user=>user.username.toLowerCase().includes(form.username.toLowerCase()))
        }
        if (form.email) {
-           Array=Array.filter(user=>user.email.toLowerCase().includes(form.email.toLowerCase()))
+           array =array.filter(user=>user.email.toLowerCase().includes(form.email.toLowerCase()))
        }
-       setFiltredUser(Array);
+       setFiltredUser(array );
    }
 
     return (
