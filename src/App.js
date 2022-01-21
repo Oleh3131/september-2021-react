@@ -1,9 +1,9 @@
 import './App.css';
 
-import Users from './Users/Users'
-import Form from './Form/Form'
+import Users from './components/Users/Users'
+import Form from './components/Form/Form'
 import {useEffect, useState} from "react";
-import {userService} from "./Services/user.services";
+import {userService} from "./services/user.services";
 
 function App() {
 
