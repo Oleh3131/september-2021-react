@@ -1,4 +1,4 @@
-const mainUrl = 'https://jsonplaceholder.typicode.com/';
+const mainUrl = 'https://jsonplaceholder.typicode.com';
 
 export const urls = {
     users: `${mainUrl}/users`,

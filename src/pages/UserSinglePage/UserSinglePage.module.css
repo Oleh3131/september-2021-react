@@ -1,0 +1,37 @@
+
+.postsId {
+    display: flex;
+    flex-direction: column;
+   width: 300px;
+    row-gap: 40px;
+}
+
+.userSingleIdButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 25px;
+    background: rgba(67, 99, 255, 1);
+    font-size: 18px;
+    border: 2px solid snow;
+    border-radius: 5px;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.userSingleIdButton>a {
+    color: snow;
+    text-decoration: none;
+}
+
+.userPosts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.userPosts>div {
+    border: 2px solid silver;
+    padding: 5px;
+}

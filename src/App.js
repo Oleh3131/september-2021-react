@@ -5,13 +5,19 @@ import Header from "./components/Header/Header";
 import UsersPage from './pages/UsersPage/UsersPage'
 import PostsPage from './pages/PostsPage/PostsPage'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import UserSinglePage from "./pages/UserSinglePage/UserSinglePage";
+import UserPosts from "./components/UserPosts/UserPosts";
 
 function App() {
     return (
         <>
             <Routes>
                 <Route path={'/'} element={<Header/>}>
-                    <Route path={'users'} element={<UsersPage/>}/>
+                    <Route path={'users'} element={<UsersPage/>}>
+                        <Route path={':id'} element={<UserSinglePage/>}>
+                            <Route path={'posts'} element={<UserPosts/>}/>
+                        </Route>
+                    </Route>
                     <Route path={'posts'} element={<PostsPage/>}/>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>

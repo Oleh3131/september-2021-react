@@ -1,0 +1,33 @@
+
+.user {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user a{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.userButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 25px;
+    font-size: 18px;
+    color: snow;
+    background: rgba(67, 99, 255, 1);
+    border: 2px solid snow;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.usersPage {
+    display: flex;
+    justify-content: space-between;
+}

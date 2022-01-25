@@ -8,10 +8,10 @@ const Header = () => {
         <>
             <div className={css.header}>
                 <NavLink to='users'>
-                    <button>Users</button>
+                    <button className={css.usersButton}>Users</button>
                 </NavLink>
                 <NavLink to='posts'>
-                    <button>Posts</button>
+                    <button className={css.postsButton}>Posts</button>
                 </NavLink>
             </div>
 

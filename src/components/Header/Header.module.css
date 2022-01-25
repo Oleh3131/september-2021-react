@@ -23,7 +23,7 @@
 }
 
 
-a > button {
+.usersButton, .postsButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,4 +35,10 @@ a > button {
     font-size: 25px;
     color: snow;
     cursor: pointer;
+}
+
+.outlet {
+    display:flex;
+    flex-direction: column;
+    margin: 20px 50px 20px 50px;
 }

@@ -9,8 +9,14 @@ const getPostsById = (id) => {
     return fetch(`${urls.posts}/${id}`)
         .then(value => value.json());
 };
+const getPostsofUserById = (id) => {
+    return fetch(`${urls.users}/${id}/posts`)
+        .then(value => value.json());
+};
+
 
 export const postService = {
     getPosts,
-    getPostsById
+    getPostsById,
+    getPostsofUserById
 };
