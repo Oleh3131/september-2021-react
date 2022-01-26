@@ -88,5 +88,31 @@
     margin-top: 5px;
     color: snow;
     cursor: pointer;
+}
 
+.img>img{
+    width: 100px;
+    height: 100px;
+}
+
+.photosDetails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid silver;
+    padding: 5px;
+    width: 300px;
+    height: 150px;
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+}
+
+.photosList {
+    width: 150px;
+    font-size: 16px;
 }

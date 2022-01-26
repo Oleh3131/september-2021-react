@@ -14,7 +14,7 @@ const AlbumsList = ({albums}) => {
             <p>title: {title}</p>
 
             <Link to={id.toString()+'/photos'}>
-                <button className={css.photosButton}>User</button>
+                <button className={css.photosButton}>Photos</button>
             </Link>
         </div>
     );

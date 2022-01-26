@@ -22,7 +22,9 @@ const Albums = () => {
 
             {albums.map(value => <AlbumsList key={value.id} albums={value}/>)}
 
-            <div><Outlet/></div>
+            <div>
+                <Outlet/>
+            </div>
 
         </div>
     );

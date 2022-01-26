@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
+
 import {userService} from "../../services/user.service";
 import PhotosList from "./PhotosList";
+import css from '../User/User.module.css'
 
 const Photos = () => {
 
@@ -16,7 +18,7 @@ const Photos = () => {
     }, [id]);
 
     return (
-        <div>
+        <div className={css.photos}>
             {photos.map(value => <PhotosList key={value.id} photo={value}/>)}
         </div>
     );
