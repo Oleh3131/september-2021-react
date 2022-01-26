@@ -5,7 +5,7 @@
 }
 
 
-.user a{
+.user a {
     display: flex;
     align-items: center;
     column-gap: 20px;
@@ -30,4 +30,63 @@
 .usersPage {
     display: flex;
     justify-content: space-between;
+}
+
+.toBlocks {
+    display: flex;
+}
+
+.buttonToAlbums > a {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.albumsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(67, 99, 255, 1);
+    border: 2px solid snow;
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+    font-size: 16px;
+    color: snow;
+    cursor: pointer;
+}
+
+.albums {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    row-gap: 10px;
+}
+
+.albumsDetails {
+    border: 2px solid silver;
+    padding: 10px;
+}
+
+.albumsDetails > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.photosButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    background: rgba(67, 99, 255, 1);
+    border: 2px solid snow;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: snow;
+    cursor: pointer;
+
 }

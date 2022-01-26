@@ -9,6 +9,8 @@ import UserSinglePage from "./pages/UserSinglePage/UserSinglePage";
 import UserPosts from "./components/UserPosts/UserPosts";
 import PostId from "./components/PostId/PostId";
 import PostSingleId from "./components/Post/PostSingleId";
+import Albums from "./components/Albums/Albums";
+import Photos from "./components/Photos/Photos";
 
 function App() {
     return (
@@ -16,6 +18,9 @@ function App() {
             <Routes>
                 <Route path={'/'} element={<Header/>}>
                     <Route path={'users'} element={<UsersPage/>}>
+                        <Route path={':id/albums'} element={<Albums/>}>
+                            <Route path={':id/photos'} element={<Photos/>}/>
+                        </Route>
                         <Route path={':id'} element={<UserSinglePage/>}>
                             <Route path={'posts'} element={<UserPosts/>}/>
                         </Route>

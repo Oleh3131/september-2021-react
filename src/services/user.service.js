@@ -10,8 +10,20 @@ const getById = (id) => {
         .then(value => value.json());
 };
 
+const getAlbumsById = (id) => {
+    return fetch(`${urls.users}/${id}/albums`)
+        .then(value => value.json());
+};
+
+const getPhotosById = (id) => {
+    return fetch(`${urls.albums}/${id}/photos`)
+        .then(value => value.json());
+};
+
 
 export const userService ={
     getAll,
-    getById
+    getById,
+    getAlbumsById,
+    getPhotosById
 }
