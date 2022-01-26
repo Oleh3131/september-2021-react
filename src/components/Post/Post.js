@@ -1,13 +1,20 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-const Post = ({posts}) => {
-    const {id,userId,title,body}=posts
+import css from '../../components/PostId/Post.module.css'
+
+
+const Post = ({post}) => {
+    const {id, title} = post
     return (
-        <div>
-            <h2>id: {id}</h2>
-            <h4>userId: {userId}</h4>
-            <p>title: {title}</p>
-            <p>body: {body}</p>
+        <div className={css.postTitle}>
+
+            <Link to={id.toString()} state={post}>{id}) {title}
+
+                <button className={css.postButton}>Post</button>
+
+            </Link>
+
         </div>
     );
 };

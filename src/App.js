@@ -7,6 +7,8 @@ import PostsPage from './pages/PostsPage/PostsPage'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import UserSinglePage from "./pages/UserSinglePage/UserSinglePage";
 import UserPosts from "./components/UserPosts/UserPosts";
+import PostId from "./components/PostId/PostId";
+import PostSingleId from "./components/Post/PostSingleId";
 
 function App() {
     return (
@@ -18,7 +20,11 @@ function App() {
                             <Route path={'posts'} element={<UserPosts/>}/>
                         </Route>
                     </Route>
-                    <Route path={'posts'} element={<PostsPage/>}/>
+                    <Route path={'posts'} element={<PostsPage/>}>
+                        <Route path={':id'} element={<PostId/>}>
+                            <Route path={'comments'} element={<PostSingleId/>}/>
+                            </Route>
+                        </Route>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

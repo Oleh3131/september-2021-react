@@ -1,0 +1,78 @@
+
+.allContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.postTitle {
+    display: flex;
+
+}
+
+.postTitle > a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.postButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: snow;
+    font-size: 18px;
+    width: 75px;
+    height: 25px;
+    background: rgba(67, 99, 255, 1);
+    border-radius: 5px;
+    border: 2px solid snow;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.singlePost {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.singlePost>a{
+    margin-left: 175px;
+    margin-top: 10px
+
+}
+
+.singlePostButton{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    color: snow;
+    background: rgba(67, 99, 255, 1);
+    border-radius: 5px;
+    border: 2px solid snow;
+    cursor: pointer;
+}
+
+.allComments {
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+    row-gap: 25px;
+}
+
+.allComments>div {
+    border: 2px solid silver;
+    padding: 10px ;
+}

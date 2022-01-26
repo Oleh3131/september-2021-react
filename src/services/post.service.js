@@ -14,9 +14,15 @@ const getPostsofUserById = (id) => {
         .then(value => value.json());
 };
 
+const getCommentsofPostById = (id) => {
+    return fetch(`${urls.posts}/${id}/comments`)
+        .then(value => value.json());
+};
+
 
 export const postService = {
     getPosts,
     getPostsById,
-    getPostsofUserById
+    getPostsofUserById,
+    getCommentsofPostById
 };
