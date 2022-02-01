@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background: #5a91fa;
+}
+
+.mainForm {
+    font-style: italic;
+    margin-top: 40px;
+}
+
+.mainForm>button {
+   width: 75px;
+    height: 20px;
+    border:2px solid cornflowerblue;
+    border-radius: 5px;
+    background: snow;
+    color: cornflowerblue;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.mainBlockCatsandDogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 200px;
+    margin-top: 50px;
+}
+
+.mainCats, .mainDogs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    font-style: italic;
+    font-size: 18px;
+}
+
+
+.Cat, .Dog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.Cat>button{
+    width: 75px;
+    height: 20px;
+    border:2px solid cornflowerblue;
+    border-radius: 5px;
+    background: snow;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+.Dog>button{
+    width: 75px;
+    height: 20px;
+    border:2px solid cornflowerblue;
+    border-radius: 5px;
+    background: snow;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+

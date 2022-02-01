@@ -1,15 +1,17 @@
 import React from 'react';
 
-const Cat = ({cat,dispatch}) => {
+import css from  '../CatsAndDogs.module.css'
 
-    const {id,name}=cat
+const Cat = ({cat, dispatch}) => {
+
+    const {id, name} = cat
 
     const deleteCat = () => {
-        dispatch({type:'delelete_Cat',payload:{id}})
+        dispatch({type: 'delelete_Cat', payload: {id}})
     }
 
     return (
-        <div>
+        <div className={css.Cat}>
             <h4>{name}</h4>
             <button onClick={deleteCat}>Delete</button>
         </div>

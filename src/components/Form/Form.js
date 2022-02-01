@@ -1,5 +1,7 @@
 import React, {useRef} from 'react';
 
+import css from '../CatsAndDogs.module.css'
+
 const Form = ({dispatch}) => {
 
     const CatInput = useRef();
@@ -22,7 +24,7 @@ const Form = ({dispatch}) => {
 
     return (
         <div>
-            <form onSubmit={submit}>
+            <form className={css.mainForm} onSubmit={submit}>
                 <label>Only cats: <input type="text" placeholder={'cats'} ref={CatInput}/></label>
                 <button onClick={clickCat}>Save</button>
                 <label>Only dogs: <input type="text" placeholder={'dogs'} ref={DogInput}/></label>
