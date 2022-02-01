@@ -4,12 +4,13 @@ import {carService} from "../service";
 const initialState = {
     cars: [],
     status: null,
-    error: null
+    error: null,
+    carForUpdate: null
 }
 
 
 export const getAllCars = createAsyncThunk(
-    'cars/getAllCars',
+    'carSlice/getAllCars',
     async (_, {rejectedWithValue}) => {
         try {
             const cars = await carService.getAll();
@@ -17,18 +18,35 @@ export const getAllCars = createAsyncThunk(
         } catch (e) {
             return rejectedWithValue(e.message)
         }
+    }
+);
 
-
+export const updateCarById = createAsyncThunk(
+    'carSlice/updateCarById',
+    async ({id, car}, {dispatch}) => {
+        const newCar = await carService.updateById(id, car);
+        dispatch(updateCar({car: newCar}))
     }
 );
 
 
 const carSlice = createSlice({
-    name: 'cars',
+    name: 'carSlice',
     initialState,
     reducers: {
 
+        carToUpdate: (state, action) => {
 
+            state.carForUpdate = action.payload.car
+        },
+
+        updateCar: (state, action) => {
+
+            const index = state.cars.findIndex(car => car.id === action.payload.car.id)
+
+            state.cars[index] = action.payload.car
+
+        }
 
     },
     extraReducers: {
@@ -40,11 +58,13 @@ const carSlice = createSlice({
             state.cars = action.payload
         },
         [getAllCars.rejected]: (state, action) => {
-
+            state.error = action.payload
         }
     }
 });
 
 const carReducer = carSlice.reducer;
+
+export const {carToUpdate, updateCar} = carSlice.actions;
 
 export default carReducer;
