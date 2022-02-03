@@ -1,4 +1,3 @@
-
 // const func = (str:string):null|number => {
 //     return 315;
 // }
@@ -27,8 +26,6 @@
 // import {Iuser} from "./interface/user.interface";
 //
 // const user: Iuser = {name: 'Olejo', age: 31, status: true};
-
-
 
 
 // можна передати Iuser в функцію(фле обовязко щоб значення було ним протипізовано):
@@ -62,16 +59,189 @@
 // Створимо папку service, а в ній файл user.service
 
 
-import {IuserTwo} from "./interface/user.interface2";
-import {userService} from "./service/user.service";
+// import {userService} from "./service/user.service";
+//
+// userService.getAll().then(value=>value.data).then(users=>{
+//
+//     for (let user of users) {
+//         console.log(user.address.geo.lng)
+//     }
+// })
 
-userService.getAll().then(value=>value.data).then(users=>{
 
-    for (let user of users) {
-        console.log(user.id)
-    }
-})
+// -----------------------------------------------------------------------------------------------------------------------------
 
+// ПЕРЕДАЧА ЧЕРЕЗ КЛАСИ
+
+
+// class User {
+//     name: string;
+//     age: number;
+//     status: boolean;
+//
+//     constructor(name:string,age:number,status:boolean) {
+//         this.name = name;
+//         this.age = age;
+//         this.status = status;
+//     }
+// }
+//
+// const user = new User('Olejo', 31, true);
+
+
+// МОЖНА ЗРОБИТИ ПОЛЯ ПРИВАТНИМИ.ЦЕ РОБИТЬСЯ ДЛЯ ТОГО ЩОБ ЦИМИ ЗМІНАМИ МОЖНА БУЛО КОРИСТУВАТИСЬ ТІЛЬКИ В КЛАСІ.
+// ТОБТО ЯКЩО ЗНИЗУ ПОПРОБУВАТИ ВИВЕСТИ У ЮЗЕРА ПОЛЕ ВІКУ НЕ ВИЙДЕ ТОМУ ЩО ВОНО НЕ БУДЕ ЙОГО ВІДОБРАЖАТИ БО ВОНО СТАЛО ПРИВАТНИМ.
+// ТЕПЕР ДО ЦИХ ЗМІННИХ МОЖНА ДОСТУПАТИСЬ МЕТОДАМИ
+// МЕТОД private
+
+// class User {
+//     private name: string;
+//     private age: number;
+//     private status: boolean;
+//
+//     constructor(name:string,age:number,status:boolean) {
+//         this.name = name;
+//         this.age = age;
+//         this.status = status;
+//     }
+//
+//     getName(): string {
+//        return this.name;
+//     }
+// }
+//
+// const user = new User('Olejo', 31, true);
+// console.log(user.getName())
+
+
+// МОЖНА ВСЕ ЦЕ СКОРОТИТИ:
+
+// class User {
+//       constructor(private name:string,private age:number,private status:boolean) {
+//          this.name = name;
+//         this.age = age;
+//         this.status = status;
+//     }
+//
+//     getName(): string {
+//        return this.name;
+//     }
+// }
+//
+// const user = new User('Olejo', 31, true);
+// console.log(user.getName())
+
+
+// -------------------------------------------------------------------------------------------------------------------------
+
+// Є ЩЕ МЕТОД protected
+// ТАКОЖ ДО ЗМІННОЇ НЕ ДОСТУПИТИСЬ
+// ДО НЕЇ МОЖНА БУДЕ ДОСТУПИТИСЬ В КЛАСІ НАЩАДКА
+
+
+// class User {
+//     name: string;
+//     age: number;
+//     status: boolean;
+//
+//     constructor(name:string,age:number,status:boolean) {
+//         this.name = name;
+//         this.age = age;
+//         this.status = status;
+//     }
+//
+//     protected getName(): string {
+//        return this.name;
+//     }
+// }
+//
+// const user = new User('Olejo', 31, true);
+//
+// class UserChild extends User {
+//     constructor(name:string,age:number,status:boolean) {
+//         super(name,age,status);
+//     }
+//
+//     getParentName(): string {
+//         return this.name;
+//     }
+//
+//     protected getName(): string {
+//         return super.getName();
+//     }
+// }
+//
+// const child = new UserChild('Bill', 56, false);
+// console.log(child.getParentName())
+
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// ЩЕ Є МЕТОД ПО ЗАМОВЧУВАННЮ public
+// ВІДОБРАЖАЄ ПРОСТО ЗВИЧАЙНІ ВІДКРИТІ ДАНІ
+
+// ------------------------------------------------------------------------------------------------------------------------------
+
+
+// КЛАСАМИ ТАКОЖ МОЖНА ЩОСЬ ТИПІЗУВАТИ(НЕ ТІЛЬКИ ІНТЕРФЕЙСАМИ):
+
+
+// class User {
+//     constructor(private name: string, private age: number, private status: boolean) {
+//     }
+// }
+//
+// const userObj:User={age:25,name:"Karl",status:true}
+
+// ----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// import {IShapesActionInterface} from "./interface/ShapesAction.interface";
+//
+// class Rectangle implements IShapesActionInterface {
+//     constructor(private a:number,private b:number) {
+//     }
+//
+//     area(): number {
+//         return this.a*this.b;
+//     }
+//
+//     perimeter(): number {
+//         return this.a+this.b;
+//     }
+// }
+//
+//
+//
+// class Triangle implements IShapesActionInterface {
+//     constructor(private a:number,private b:number,private c:number) {
+//     }
+//
+//     area(): number {
+//         return this.a*this.b*this.c;
+//     }
+//
+//     perimeter(): number {
+//         return this.a+this.b+this.c;
+//     }
+// }
+//
+//
+// const shapes:IShapesActionInterface[]=[new Rectangle(1,3),new Triangle(2,3,4)]
+//
+// for (let shape of shapes) {
+//     console.log(shape.constructor['name'],'Area',shape.area())
+//     console.log(shape.constructor['name'],'Perimeter',shape.perimeter())
+//
+// }
+
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+import {MyEnum} from './interface/enum'
+
+console.log(MyEnum.FRI)
 
 
 
