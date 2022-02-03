@@ -5,7 +5,7 @@ export enum MyEnum {
     // THU=3,
     // FRI=4,
     // SAT=5,
-    // SUN=6,
+    // SUN=60,
 
     OK = 200,
     BAD_REQUEST = 201,
