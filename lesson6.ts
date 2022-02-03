@@ -63,8 +63,14 @@
 
 
 import {IuserTwo} from "./interface/user.interface2";
+import {userService} from "./service/user.service";
 
+userService.getAll().then(value=>value.data).then(users=>{
 
+    for (let user of users) {
+        console.log(user.name)
+    }
+})
 
 
 
