@@ -44,3 +44,11 @@ export interface Iuser{
     age:number;
     gender:string;
 }
+
+export interface IsomeUser{
+    someUser: number;
+    inc: number;
+    age: number;
+}
+
+

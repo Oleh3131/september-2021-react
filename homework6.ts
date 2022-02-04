@@ -1,4 +1,4 @@
-import {IMission} from "./interface/mission.interface";
+import { IMission, IsomeUser} from "./interface/mission.interface";
 import {Iuser} from "./interface/mission.interface";
 
 // 1) создать интерфейс на основе этого объекта:
@@ -62,11 +62,15 @@ function showSum(a:number, b:number):void {
     console.log(a + b);
 }
 
-function incAge(someUser, inc:number):number {
+function incAge(someUser:Partial<IsomeUser>, inc):Partial<IsomeUser> {
     someUser.age+= inc
     return someUser
 }
 
 console.log(sum(1, 2));
 showSum(2, 3)
-incAge(user, 2)
+const incAge1 = incAge(user, 2);
+console.log(incAge1);
+
+
+
