@@ -5,6 +5,7 @@ import {joiResolver} from "@hookform/resolvers/joi";
 
 import {updateCarById} from "../../slices";
 import CarValidator from "../../validators/car.validator";
+import css from '../Car.module.css'
 
 
 
@@ -34,7 +35,7 @@ const Form = () => {
     }, [carForUpdate])
 
     return (
-        <form onSubmit={handleSubmit(submit)}>
+        <form className={css.Form} onSubmit={handleSubmit(submit)}>
             <label>Model: <input type="text" placeholder={'model'} {...register('model')}/></label>
             {errors.model && <span>{errors.model.message}</span>}
             <label>Price: <input type="text" placeholder={'price'} {...register('price')}/></label>

@@ -69,7 +69,3 @@ const carReducer = carSlice.reducer;
 export const {carToUpdate,updateCar} = carSlice.actions;
 
 export default carReducer;
-
-
-
-// che
