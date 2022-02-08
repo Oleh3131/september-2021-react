@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {Outlet} from "react-router-dom";
 
 import Car from "../Car/Car";
 import {getCar} from "../../slices";
 import css from '../Car.module.css'
+
 
 
 const Cars = () => {
@@ -16,7 +18,7 @@ const Cars = () => {
 
         dispatch(getCar());
 
-    });
+    },[]);
 
     return (
         <div className={css.Cars}>
@@ -25,7 +27,9 @@ const Cars = () => {
             <div className={css.CarBlocks}>
                 {cars.map(value => <Car key={value.id} car={value}/>)}
             </div>
-
+            <div>
+                <Outlet/>
+            </div>
         </div>
     );
 };

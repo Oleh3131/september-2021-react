@@ -1,8 +1,10 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import {useDispatch} from "react-redux";
 
 import css from '../Car.module.css'
-import {useDispatch} from "react-redux";
 import {carToUpdate} from "../../slices";
+
 
 const Car = ({car}) => {
 
@@ -18,7 +20,9 @@ const Car = ({car}) => {
                     <li>Price: {price}</li>
                     <li>Year: {year}</li>
                 </ul>
-                <button onClick={() => dispatch(carToUpdate({car}))}>Update</button>
+            <Link to={'form'}>
+                <button className={css.carButton} onClick={() => dispatch(carToUpdate({car}))}>Update</button>
+            </Link>
                 <hr/>
         </div>
     );
