@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import {useDispatch} from "react-redux";
 
 import {addValue} from "../../slices/form.slice";
-import css from '../Form.module.css'
+import css from './Form.module.css'
 
 const Form = () => {
 

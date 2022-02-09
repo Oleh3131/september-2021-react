@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch} from "react-redux";
 
 import {changeStatus, deleteValue} from "../../slices/form.slice";
-import css from '../Form.module.css'
+import css from '../Form/Form.module.css'
 
 
 const Value = ({value}) => {
