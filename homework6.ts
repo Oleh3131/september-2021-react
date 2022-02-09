@@ -62,7 +62,7 @@ function showSum(a:number, b:number):void {
     console.log(a + b);
 }
 
-function incAge(someUser:Partial<IsomeUser>, inc):Partial<IsomeUser> {
+function incAge(someUser:Partial<IsomeUser>, inc:number):Partial<IsomeUser> {
     someUser.age+= inc
     return someUser
 }
