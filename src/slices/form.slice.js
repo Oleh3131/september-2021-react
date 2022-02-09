@@ -1,10 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-
 const initialState = {
     formValues: []
 }
-
 
 const formSlice = createSlice({
     name: 'formSlice',
@@ -18,6 +16,12 @@ const formSlice = createSlice({
                 status:false
             })
         },
+
+        changeStatus:(state,action)=>{
+            const find = state.formValues.find(formValues => formValues.id === action.payload.id);
+            find.status = !find.status;
+        },
+
         deleteValue: (state, action) => {
             state.formValues = state.formValues.filter(value=>value.id!==action.payload.id)
 
@@ -30,6 +34,6 @@ const formSlice = createSlice({
 
 const formReducer = formSlice.reducer;
 
-export const {addValue, deleteValue} = formSlice.actions;
+export const {addValue, deleteValue,changeStatus} = formSlice.actions;
 
 export default formReducer;
